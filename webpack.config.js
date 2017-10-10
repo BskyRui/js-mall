@@ -1,5 +1,16 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// 获取html配置
+const getHtmlConfig = function(name) {
+    return {
+        template: 'view/' + name + '.html',
+        filename: 'view/' + name + '.html',
+        inject: true,
+        hash: true,
+        chunks: ['common', name]
+    }
+};
 
 const config = {
     // webpack编译时的基础目录, 入口起点(entry)会相对于此目录查找
@@ -43,7 +54,10 @@ const config = {
             filename: 'js/base.js'
         }),
         // 提取css
-        new ExtractTextPlugin('css/[name].css')
+        new ExtractTextPlugin('css/[name].css'),
+        // 处理html模板
+        new HtmlWebpackPlugin(getHtmlConfig('index')),
+        new HtmlWebpackPlugin(getHtmlConfig('login'))
     ],
 
     // 运行时从外部获取, 解决 import $ from 'jquery'
