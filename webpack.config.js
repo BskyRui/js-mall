@@ -77,6 +77,12 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('login'))
     ],
 
+    resolve: {
+        alias: {
+            util: __dirname + '/src/util'
+        }
+    },
+
     // 运行时从外部获取, 解决 import $ from 'jquery'
     externals: {
         jquery: 'jQuery'
