@@ -43,6 +43,17 @@ const config = {
                     fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
                 })    
+            },
+            {
+                test: /\.(png|jpg|gif|woff|eot|ttf)$/,
+                // \??.*$
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        name: 'static/[hash].[ext]',
+                        limit: 8192
+                    }
+                }
             }
         ]
     },
