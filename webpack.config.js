@@ -1,6 +1,11 @@
+'use strict';
+
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
+
+
 // 获取html配置
 const getHtmlConfig = function(name) {
     return {
@@ -24,6 +29,7 @@ const config = {
 
     output: {
         path: __dirname + '/dist',
+        publicPath: '/dist/',
         filename: 'js/[name].bundle.js'
     },
 
@@ -76,5 +82,8 @@ const config = {
         jquery: 'jQuery'
     }
 };
+
+// webpack-dev-server
+'dev' === WEBPACK_ENV && config.entry.common.push('webpack-dev-server/client?http://localhost:8080');
 
 module.exports = config;
