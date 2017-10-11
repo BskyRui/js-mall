@@ -1,5 +1,7 @@
 'use strict';
 
+var Hogan = require('hogan.js');
+
 var conf = {
     serverHost: ''
 };
@@ -32,6 +34,12 @@ var method = {
 
     doLogin: function() {
         window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+    },
+
+    renderHtml: function(tpl, data) {
+        var template = Hogan.compile(tpl),
+            result = template.render(data);
+        return result;
     },
 
     getUrlParam: function(name) {
