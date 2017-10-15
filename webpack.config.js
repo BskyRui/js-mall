@@ -79,7 +79,8 @@ const config = {
 
     resolve: {
         alias: {
-            util: __dirname + '/src/util'
+            util: __dirname + '/src/util',
+            img: __dirname + '/src/img'
         }
     },
 

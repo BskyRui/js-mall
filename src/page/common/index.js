@@ -1,1 +1,5 @@
-console.log('common');
+'use strict';
+
+import './layout.scss';
+
+
