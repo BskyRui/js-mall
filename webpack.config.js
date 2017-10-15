@@ -51,7 +51,7 @@ const config = {
                 })    
             },
             {
-                test: /\.(png|jpg|gif|woff|eot|ttf)$/,
+                test: /\.(png|jpg|gif|woff|eot|ttf|svg)\??.*$/,
                 // \??.*$
                 use: {
                     loader: 'url-loader',
@@ -80,7 +80,8 @@ const config = {
     resolve: {
         alias: {
             util: __dirname + '/src/util',
-            img: __dirname + '/src/img'
+            img: __dirname + '/src/img',
+            node_modules: __dirname + '/node_modules'
         }
     },
 
