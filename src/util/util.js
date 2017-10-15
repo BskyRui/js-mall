@@ -42,6 +42,33 @@ var method = {
         return result;
     },
 
+    successTip: function(msg) {
+        alert(msg || '操作成功~');
+    },
+
+    errorTip: function(msg) {
+        alert(msg || '操作成功~');
+    },
+
+    validate: function(value, type) {
+        var value = $.trim(value);
+        if ('require' === type) {
+            return !!value;
+        }
+
+        if ('phone' === type) {
+            return /^1\d{10}$/.test(value);
+        }
+
+        if ('email' === type) {
+            return /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(value);
+        }
+    },
+
+    go: function(url) {
+        window.location.href = url;
+    },
+
     getUrlParam: function(name) {
         // xxx.com/index?keyword=1&page=1
         var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
