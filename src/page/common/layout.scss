@@ -26,12 +26,15 @@ input[type='checkbox'] {
     cursor: pointer
 }
 
+a {
+    text-decoration: none;
+}
+
 .w {
     width: 1080px;
     margin: 0 auto;
     position: relative;
     overflow: hidden; // 清除浮动
-
 }
 
 // global css style

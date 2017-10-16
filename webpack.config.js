@@ -81,6 +81,7 @@ const config = {
         alias: {
             util: __dirname + '/src/util',
             img: __dirname + '/src/img',
+            page: __dirname + '/src/page',
             node_modules: __dirname + '/node_modules'
         }
     },

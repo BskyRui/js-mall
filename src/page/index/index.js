@@ -1,8 +1,8 @@
 'use strict';
 
 import $ from 'jquery';
-
 import util from 'util/util.js';
+import 'page/common/nav/index.js'
 
 console.log(util.getUrlParam('test'));
 console.log(util.renderHtml('<div>{{data}}</div>', {data: 'ccc'}));
