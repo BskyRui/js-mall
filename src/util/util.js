@@ -81,4 +81,4 @@ var method = {
     }
 };
 
-module.exports = method;
+export default method;
