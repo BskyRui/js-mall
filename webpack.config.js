@@ -82,6 +82,7 @@ const config = {
             util: __dirname + '/src/util',
             img: __dirname + '/src/img',
             page: __dirname + '/src/page',
+            service: __dirname + '/src/service',
             node_modules: __dirname + '/node_modules'
         }
     },
