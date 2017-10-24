@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import util from 'util/util.js';
 import nav from 'page/common/nav/index.js';
+import header from 'page/common/header/index.js';
 
 console.log(util.getUrlParam('test'));
 console.log(util.renderHtml('<div>{{data}}</div>', {data: 'ccc'}));

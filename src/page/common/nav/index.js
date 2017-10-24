@@ -3,12 +3,13 @@
 import './index.scss';
 import util from 'util/util.js';
 import userService from 'service/user-service.js';
+import cartService from 'service/cart-service.js';
 
 var nav = {
     init: function() {
         this.bindEvent();
         this.loadUserInfo();
-        this.loadCarCount();
+        this.loadCartCount();
         return this;
     },
 
