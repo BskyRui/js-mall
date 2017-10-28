@@ -60,6 +60,12 @@ const config = {
                         limit: 8192
                     }
                 }
+            },
+            {
+                test: /\.tpl$/,
+                use: {
+                    loader: 'html-loader'
+                }
             }
         ]
     },
