@@ -7,8 +7,9 @@ const WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 
 
 // 获取html配置
-const getHtmlConfig = function(name) {
+const getHtmlConfig = function(name, title) {
     return {
+        title: title,
         template: 'view/' + name + '.html',
         filename: 'view/' + name + '.html',
         inject: true,
@@ -24,7 +25,8 @@ const config = {
     entry: {
         common: ['./page/common/index.js'],
         index: ['./page/index/index.js'],
-        login: ['./page/login/index.js']
+        login: ['./page/login/index.js'],
+        result: ['./page/result/index.js'],
     },
 
     output: {
@@ -79,8 +81,9 @@ const config = {
         // 提取css
         new ExtractTextPlugin('css/[name].css'),
         // 处理html模板
-        new HtmlWebpackPlugin(getHtmlConfig('index')),
-        new HtmlWebpackPlugin(getHtmlConfig('login'))
+        new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('login', '登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ],
 
     resolve: {
