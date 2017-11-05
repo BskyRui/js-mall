@@ -25,7 +25,7 @@ const config = {
     entry: {
         common: ['./page/common/index.js'],
         index: ['./page/index/index.js'],
-        login: ['./page/login/index.js'],
+        login: ['./page/user-login/index.js'],
         result: ['./page/result/index.js'],
     },
 
@@ -82,7 +82,7 @@ const config = {
         new ExtractTextPlugin('css/[name].css'),
         // 处理html模板
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
-        new HtmlWebpackPlugin(getHtmlConfig('login', '登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-login', '登录')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ],
 
