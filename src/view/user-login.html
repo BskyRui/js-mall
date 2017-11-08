@@ -6,7 +6,7 @@
 </head>
 <body>
     <%= require('html-loader!./layout/nav-simple.html') %>
-    <div class="page-wrap">
+    <div class="page-wrap user-login">
         <div class="w">
             <div class="user-con">
                 <div class="user-title">用户登录</div>
@@ -25,9 +25,9 @@
                         <label class="user-label" for="password">
                             <i class="fa fa-lock"></i>
                         </label>
-                        <input class="user-content" id="password" type="text" placeholder="type password" autocomplete="false"/>
+                        <input class="user-content" type="password" id="password" type="text" placeholder="type password" autocomplete="false"/>
                     </div>
-                    <a href="#" class="btn btn-submit">登录</a>
+                    <a class="btn btn-submit" id="submit">登录</a>
                     <div class="link-item">
                         <a href="./user-pass-reset.html" target="_blank" class="link">忘记密码?</a>
                         <a href="./user-register.html" target="_blank" class="link">注册帐号</a>

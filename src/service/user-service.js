@@ -3,6 +3,16 @@
 import util from 'util/util.js';
 
 var user = {
+    login: function(userinfo, resolve, reject) {
+        util.request({
+            url: util.getServerUrl('/user/login.do'),
+            method: 'POST',
+            data: userinfo,
+            success: resolve,
+            error: reject
+        });
+    },
+
     checkLogin: function(resolve, reject) {
         util.request({
             url: util.getServerUrl('/user/get_user_info.do'),
