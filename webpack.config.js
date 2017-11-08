@@ -23,10 +23,10 @@ const config = {
     context: __dirname + '/src',
     // 配置多入口
     entry: {
-        common: ['./page/common/index.js'],
-        index: ['./page/index/index.js'],
-        login: ['./page/user-login/index.js'],
-        result: ['./page/result/index.js'],
+        'common': ['./page/common/index.js'],
+        'index': ['./page/index/index.js'],
+        'user-login': ['./page/user-login/index.js'],
+        'result': ['./page/result/index.js'],
     },
 
     output: {
