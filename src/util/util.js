@@ -51,7 +51,7 @@ var method = {
     },
 
     validate: function(value, type) {
-        var value = $.trim(value);
+        // var value = $.trim(value);
         if ('require' === type) {
             return !!value;
         }
