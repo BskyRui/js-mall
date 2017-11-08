@@ -24,6 +24,7 @@
                 border: 1px solid red;
                 color: red;
                 background: #fde9e9;
+                display: none;
             }
             .error-icon {
                 position: absolute;
@@ -33,40 +34,41 @@
                 margin-top: -7px;
 
             }
+
+            .user-item {
+                position: relative;
+                margin-bottom: 20px;
+                .user-label {
+                    position: absolute;
+                    left: 1px;
+                    top: 1px;
+                    bottom: 1px;
+                    width: 40px;
+                    line-height: 36px;
+                    background: #f3f3f3;
+                    font-size: 18px;
+                    color: #d3d3d3;
+                    text-align: center;
+                    border-right: 1px solid #bfbfbf;
+                }
+                // input 
+                .user-content {
+                    padding: 10px 0 10px 50px;
+                    width: 308px;
+                    height: 18px;
+                    line-height: 18px;
+                    font-size: 15px;
+                    border: 1px solid #bfbfbf;
+                    outline: none;
+                }
+            }
         }
 
-        .user-item {
-            position: relative;
-            margin-bottom: 20px;
-            .user-label {
-                position: absolute;
-                left: 1px;
-                top: 1px;
-                bottom: 1px;
-                width: 40px;
-                line-height: 36px;
-                background: #f3f3f3;
-                font-size: 18px;
-                color: #d3d3d3;
-                text-align: center;
-                border-right: 1px solid #bfbfbf;
-            }
-            // input 
-            .user-content {
-                padding: 10px 0 10px 50px;
-                width: 308px;
-                height: 18px;
-                line-height: 18px;
-                font-size: 15px;
-                border: 1px solid #bfbfbf;
-                outline: none;
-            }
-        }
     }
     // login btn
     .btn-submit {
         width: 100%;
-        padding: 3px 0;
+        padding: 2px 0;
         text-align: center;
         font-size: 20px;
     }
