@@ -13,6 +13,29 @@ var user = {
         });
     },
 
+    checkUsername: function(username, resolve, reject) {
+        util.request({
+            url: util.getServerUrl('/user/check_valid.do'),
+            method: 'POST',
+            data: {
+                type: 'username',
+                str: username
+            },
+            success: resolve,
+            error: reject
+        });
+    },
+
+    register: function(userinfo, resolve, reject) {
+        util.request({
+            url: util.getServerUrl('/user/register.do'),
+            method: 'POST',
+            data: userinfo,
+            success: resolve,
+            error: reject
+        });
+    },
+
     checkLogin: function(resolve, reject) {
         util.request({
             url: util.getServerUrl('/user/get_user_info.do'),

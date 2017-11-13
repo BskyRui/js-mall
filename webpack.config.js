@@ -26,6 +26,7 @@ const config = {
         'common': ['./page/common/index.js'],
         'index': ['./page/index/index.js'],
         'user-login': ['./page/user-login/index.js'],
+        'user-register': ['./page/user-register/index.js'],
         'result': ['./page/result/index.js'],
     },
 
@@ -83,6 +84,7 @@ const config = {
         // 处理html模板
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register', '注册')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ],
 
