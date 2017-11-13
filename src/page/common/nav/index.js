@@ -20,7 +20,7 @@ var nav = {
         });
         // reg
         $('.nav .js-reg').on('click', function(e) {
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
         // logout
         $('.nav .js-logout').on('click', function() {
@@ -34,7 +34,7 @@ var nav = {
 
     loadUserInfo: function() {
         userService.checkLogin(function(response) {
-            $('.nav .user.un-login').hide().siblings('.user.login').show().find('.username').text(res.username);
+            $('.nav .user.un-login').hide().siblings('.user.login').show().find('.username').text(response.data.username);
         }, function(errMsg) {
             // nothing
         });
