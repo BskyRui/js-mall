@@ -11,7 +11,7 @@ var handleErrorMsg = {
     },
 
     hide: function() {
-        $('.user-login .error-item').hide().text('');
+        $('.user-login .error-item').hide().find('.err-msg').text('');
     }
 };
 
