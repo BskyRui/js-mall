@@ -27,6 +27,7 @@ const config = {
         'index': ['./page/index/index.js'],
         'user-login': ['./page/user-login/index.js'],
         'user-register': ['./page/user-register/index.js'],
+        'user-pass-reset': ['./page/user-pass-reset/index.js'],
         'result': ['./page/result/index.js'],
     },
 
@@ -85,6 +86,7 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ],
 
