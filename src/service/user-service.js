@@ -72,6 +72,16 @@ var user = {
             error: reject
         });
     },
+
+    updatePassword : function(userinfo, resolve, reject){
+        util.request({
+            url: util.getServerUrl('/user/reset_password.do'),
+            data: userinfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
     
     getQuestion: function(username, resolve, reject) {
         util.request({
