@@ -28,6 +28,8 @@ const config = {
         'user-login': ['./page/user-login/index.js'],
         'user-register': ['./page/user-register/index.js'],
         'user-pass-reset': ['./page/user-pass-reset/index.js'],
+        'user-center': ['./page/user-center/index.js'],
+        'user-center-update': ['./page/user-center-update/index.js'],
         'result': ['./page/result/index.js'],
     },
 
@@ -87,6 +89,8 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ],
 

@@ -8,6 +8,7 @@ $red: #c60023;
         left: 50px;
         top: 38px;
         font-weight: bold;
+        text-decoration: none;
     }
 
     .search-con {
@@ -26,6 +27,17 @@ $red: #c60023;
             position: absolute;
             height: 44px;
             width: 80px;
+            border-radius: 0;
         }
     }
+}
+
+.crumb {
+    margin-bottom: 10px;
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px solid $red;
 }

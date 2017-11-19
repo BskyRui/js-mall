@@ -53,6 +53,25 @@ var user = {
             error: reject
         });
     },
+
+    getUserInfo: function(resolve, reject) {
+        util.request({
+            url: util.getServerUrl('/user/get_information.do'),
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
+
+    updateUserInfo : function(userinfo, resolve, reject){
+        util.request({
+            url: util.getServerUrl('/user/update_information.do'),
+            data: userinfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
     
     getQuestion: function(username, resolve, reject) {
         util.request({

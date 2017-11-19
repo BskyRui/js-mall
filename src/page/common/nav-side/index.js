@@ -2,7 +2,7 @@
 
 import './index.scss';
 import util from 'util/util.js';
-import navListTpl from './index.tpl';
+import navListTpl from './nav.tpl';
 
 // 侧边导航
 var nav = {
