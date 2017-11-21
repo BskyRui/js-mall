@@ -6,20 +6,22 @@ import nav from 'page/common/nav/index.js';
 import header from 'page/common/header/index.js';
 import navSide from 'page/common/nav-side/index.js';
 
+import './index.scss';
+import bannerHTML from './banner.tpl';
+import 'util/slider/index.js';
 
-navSide.init({
-    name: 'pass-update'
+
+$(function() {
+    // render banner
+    var bannerHtml  = util.renderHtml(bannerHTML);
+    $('.index-container .banner-con').html(bannerHtml);
+    // initial banner
+    var $slider     = $('.index-container .banner').unslider({
+        dots: true
+    });
+    // bind event
+    $('.index-container .banner-con .banner-arrow').click(function(){
+        var forward = $(this).hasClass('prev') ? 'prev' : 'next';
+        $slider.data('unslider')[forward]();
+    });
 });
-
-console.log(util.getUrlParam('test'));
-console.log(util.renderHtml('<div>{{data}}</div>', {data: 'ccc'}));
-// util.request({
-//     url: '/product/list.do?keyword=1',
-//     success: function(res) {
-//         console.log(res);
-//     },
-//     error: function(errMsg) {
-//         console.log(errMsg);
-//     }
-// });
-
