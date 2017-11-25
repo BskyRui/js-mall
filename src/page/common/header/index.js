@@ -6,6 +6,7 @@ import util from 'util/util.js';
 var header = {
     init: function() {
         this.bindEvent();
+        this.onLoad();
     },
 
     onLoad: function() {
