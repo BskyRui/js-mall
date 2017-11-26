@@ -25,6 +25,7 @@ const config = {
     entry: {
         'common': ['./page/common/index.js'],
         'index': ['./page/index/index.js'],
+        'list': ['./page/list/index.js'],
         'user-login': ['./page/user-login/index.js'],
         'user-register': ['./page/user-register/index.js'],
         'user-pass-reset': ['./page/user-pass-reset/index.js'],
@@ -87,6 +88,7 @@ const config = {
         new ExtractTextPlugin('css/[name].css'),
         // 处理html模板
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),

@@ -6,6 +6,7 @@ import _product from 'service/product-service.js';
 import './index.scss';
 
 import listTPL from './list.tpl';
+import Pagination from 'util/pagination/index.js';
 
 var page = {
     data: {
@@ -68,22 +69,38 @@ var page = {
         listParam.categoryId ? (delete listParam.keyword) : (delete listParam.categoryId);
         // fetch product list data
         _product.getProductList(listParam, function(response){
-    
             listHtml = util.renderHtml(listTPL, {
                 list: response.data.list
             });
+
             $listContainer.html(listHtml);
-            // _this.loadPagination({
-            //     hasPreviousPage : response.hasPreviousPage,
-            //     prePage         : response.prePage,
-            //     hasNextPage     : response.hasNextPage,
-            //     nextPage        : response.nextPage,
-            //     pageNum         : response.pageNum,
-            //     pages           : response.pages
-            // });
+            var data = response.data;
+            // render pagenation
+            _this.loadPagination({
+                hasPreviousPage: data.hasPreviousPage,
+                prePage: data.prePage,
+                hasNextPage: data.hasNextPage,
+                nextPage: data.nextPage,
+                pageNum: data.pageNum,
+                pages: data.pages
+            });
+
         }, function(errMsg){
             util.errorTips(errMsg);
         });
+    },
+
+    loadPagination: function(pageData) {
+        var _this = this;
+        this.pagination ? '' : (this.pagination = new Pagination());
+        this.pagination.render($.extend({}, pageData, {
+            container: $('.list-container .pagination'),
+            selectCallback: function(pageNum) {
+                // 分页数据更新
+                _this.data.listParam.pageNum = pageNum;
+                _this.loadList();
+            }
+        }));
     }
 };
 
