@@ -10,6 +10,17 @@ var product = {
             success: resolve,
             error: reject
         });
+    },
+
+    getProductDetail : function(productId, resolve, reject){
+        util.request({
+            url: util.getServerUrl('/product/detail.do'),
+            data: {
+                productId: productId
+            },
+            success: resolve,
+            error: reject
+        });
     }
 };
 

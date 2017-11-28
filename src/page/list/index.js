@@ -86,7 +86,7 @@ var page = {
             });
 
         }, function(errMsg){
-            util.errorTips(errMsg);
+            util.errorTip(errMsg);
         });
     },
 

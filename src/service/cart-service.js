@@ -9,6 +9,15 @@ var cart = {
             success: resolve,
             error: reject
         });
+    },
+    
+    addToCart : function(productInfo, resolve, reject){
+        util.request({
+            url: util.getServerUrl('/cart/add.do'),
+            data: productInfo,
+            success: resolve,
+            error: reject
+        });
     }
 };
 

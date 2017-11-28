@@ -42,7 +42,7 @@ var nav = {
 
     loadCartCount: function() {
         cartService.getCartCount(function(response) {
-            $('.nav .cart-count').text(response.count || 0);
+            $('.nav .cart-count').text(response.data || 0);
         }, function(errMsg) {
             $('.nav .cart-count').text(0);
         });
