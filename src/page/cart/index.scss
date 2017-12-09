@@ -1,0 +1,160 @@
+.cart-container {
+    .cart-header {
+        background: #eee;
+        // table header
+        .cart-table {
+            .cart-cell {
+                height: 40px;
+                line-height: 40px;
+            }
+
+            .cell-check {
+                width: 130px;
+            }
+
+            .cell-info {
+                width: 400px;
+                text-align: center;
+            }
+
+    
+            .cell-count {
+                width: 200px;
+                text-align: center;
+            }
+            .cell-total {
+                width: 100px;
+                text-align: center;
+            }
+            .cell-opera {
+                width: 110px;
+                text-align: center;
+            }
+        }
+    }
+
+    .cart-list {
+        .cart-table {
+            .cell-total {
+                color: #000;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .cart-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ebebeb;
+        margin-bottom: 10px;
+        
+        .cell-check {
+            // width: 30px;
+            padding-left: 20px;
+            text-align: left;
+        }
+        .cell-img {
+            width: 80px;
+            padding: 10px;
+            .p-img {
+                width: 80px;
+                height: 80px;
+                border: 1px solid #ddd;
+            }
+        }
+
+        .cell-info {
+            width: 400px;
+            padding: 0 10px;
+        }
+
+        .cell-price {
+            width: 100px;
+            text-align: center;
+        }
+
+        .cell-count {
+            width: 200px;
+            text-align: center;
+            .count-input {
+                width: 60px;
+                height: 28px;
+                line-height: 28px;
+                border: 1px solid #ddd;
+                text-align: center;
+                vertical-align: middle;
+                outline: none;
+                color: #333;
+            }
+            .count-btn {
+                display: inline-block;
+                width: 20px;
+                height: 28px;
+                line-height: 28px;
+                border: 1px solid #ddd;
+                vertical-align: middle;
+                cursor: pointer;
+                background: #fff;
+                -moz-user-select : none;
+                -webkit-user-select : none;
+                -ms-user-select : none;
+                user-select : none;
+            }
+        }
+
+        .cell-total {
+            width: 100px;
+            text-align: center;
+        }
+
+        .cell-opera {
+            width: 10%;
+            text-align: center;
+        }
+    
+    }
+
+    .cart-footer {
+        position: relative;
+        line-height: 50px;
+        background: #eee;
+        overflow: hidden;
+        .select-con {
+            float: left;
+            padding-left: 20px;
+        }
+
+        .delete-con{
+            float: left;
+            margin-left: 20px;
+        }
+
+        .submit-con {
+            float: right;
+            .submit-total {
+                font-size: 18px;
+                color: #c60023;
+                font-weight: bold;
+                margin-right: 30px;
+                vertical-align: middle;
+            }
+
+            .btn-submit {
+                width: 80px;
+                text-align: center;
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+    }
+
+    .err-tip {
+        height: 60px;
+        line-height: 60px;
+        color: #f60;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        background: #eee;
+    }
+}
