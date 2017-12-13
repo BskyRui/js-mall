@@ -123,6 +123,16 @@ var page = {
                 }
             }
         });
+
+        // submit
+        $(document).on('click', '.btn-submit', function(){
+            // 总价大于0
+            if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
+                window.location.href = './order-confirm.html';
+            }else{
+                util.errorTip('请选择商品后再提交');
+            }
+        });
     },
     // load cart data
     loadCart: function() {
