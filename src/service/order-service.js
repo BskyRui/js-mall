@@ -18,6 +18,37 @@ var order = {
             success: resolve,
             error: reject
         });
+    },
+
+    getOrderList: function(listParam, resolve, reject){
+        util.request({
+            url: util.getServerUrl('/order/list.do'),
+            data: listParam,
+            success: resolve,
+            error: reject
+        });
+    },
+
+    getOrderDetail : function(orderNumber, resolve, reject){
+        util.request({
+            url: util.getServerUrl('/order/detail.do'),
+            data: {
+                orderNo : orderNumber
+            },
+            success: resolve,
+            error: reject
+        });
+    },
+    
+    cancelOrder : function(orderNumber, resolve, reject){
+        util.request({
+            url: util.getServerUrl('/order/cancel.do'),
+            data: {
+                orderNo: orderNumber
+            },
+            success: resolve,
+            error: reject
+        });
     }
     
 };
