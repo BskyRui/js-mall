@@ -29,7 +29,7 @@ var order = {
         });
     },
 
-    getOrderDetail : function(orderNumber, resolve, reject){
+    getOrderDetail: function(orderNumber, resolve, reject){
         util.request({
             url: util.getServerUrl('/order/detail.do'),
             data: {
@@ -40,7 +40,7 @@ var order = {
         });
     },
     
-    cancelOrder : function(orderNumber, resolve, reject){
+    cancelOrder: function(orderNumber, resolve, reject){
         util.request({
             url: util.getServerUrl('/order/cancel.do'),
             data: {
