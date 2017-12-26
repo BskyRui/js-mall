@@ -64,7 +64,7 @@ var page = {
             listParam = this.data.listParam,
             $listContainer = $('.p-list-con');
         
-        $listContainer.html(`<div class="loading"></div>`);
+        $listContainer.html('<div class="loading"></div>');
         // delete unnecessary field
         listParam.categoryId ? (delete listParam.keyword) : (delete listParam.categoryId);
         // fetch product list data

@@ -3,6 +3,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 
 
@@ -42,8 +43,8 @@ const config = {
     },
 
     output: {
-        path: __dirname + '/dist',
-        publicPath: '/dist/',
+        path: __dirname + '/dist/',
+        publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.largerui.com/mall-fe/dist/',
         filename: 'js/[name].bundle.js'
     },
 
@@ -78,7 +79,11 @@ const config = {
             {
                 test: /\.tpl$/,
                 use: {
-                    loader: 'html-loader'
+                    loader: 'html-loader',
+                    query: {
+                        minimize: true,
+                        removeAttributeQuotes: false
+                    }
                 }
             }
         ]

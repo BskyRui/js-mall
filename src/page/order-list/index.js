@@ -24,7 +24,7 @@ var page = {
         this.onLoad();
     },
 
-    onLoad : function(){
+    onLoad: function(){
         // initial left menu
         navSide.init({
             name: 'order-list'
@@ -38,7 +38,7 @@ var page = {
             $listCon = $('.order-list-con');
         $listCon.html('<div class="loading"></div>');
         _order.getOrderList(this.data.listParam, function(response){
-            let data = response.data;
+            var data = response.data;
             // render html
             orderListHtml = util.renderHtml(ListTpl, data);
             $listCon.html(orderListHtml);
