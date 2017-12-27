@@ -3,7 +3,7 @@
 var Hogan = require('hogan.js');
 
 var conf = {
-    serverHost: ''
+    serverHost: ENV === 'prod' ? 'api.largerui.com' : ''
 };
 
 var method = {

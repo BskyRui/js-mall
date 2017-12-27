@@ -97,6 +97,10 @@ const config = {
         }),
         // 提取css
         new ExtractTextPlugin('css/[name].css'),
+        // 定义区分环境变量
+        new webpack.DefinePlugin({
+            ENV: JSON.stringify(WEBPACK_ENV)
+        }),
         // 处理html模板
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表')),
