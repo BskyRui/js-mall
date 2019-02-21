@@ -148,7 +148,7 @@ const config = {
         inline: true,
         proxy : {
             '**/*.do' : {
-                target: 'http://s.bsky.ink',
+                target: 'http://s.bsky.ink/',
                 changeOrigin : true
             }
         }
