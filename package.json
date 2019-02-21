@@ -8,6 +8,7 @@
     "dev": "WEBPACK_ENV=dev webpack-dev-server",
     "build_win": "set WEBPACK_ENV=prod && webpack -p",
     "dev_win": "webpack-dev-server",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
