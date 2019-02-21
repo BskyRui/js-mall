@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title %> - jsmall</title>
+</head>
+<body>
+    <%= require('html-loader!./layout/nav-simple.html') %>
+    <div class="page-wrap user-register">
+        <div class="w">
+            <div class="user-con">
+                <div class="user-title">用户注册</div>
+                <div class="user-box">
+                    <div class="error-item">
+                        <i class="fa fa-minus-circle error-icon"></i>
+                        <p class="err-msg">Error</p>
+                    </div>
+                    <div class="user-item">
+                        <label class="user-label" for="username">
+                            <i class="fa fa-user"></i>
+                        </label>
+                        <input class="user-content" id="username" type="text" placeholder="type username" autocomplete="false"/>
+                    </div>
+                    <div class="user-item">
+                        <label class="user-label" for="password">
+                            <i class="fa fa-lock"></i>
+                        </label>
+                        <input class="user-content" type="password" id="password" placeholder="type password" autocomplete="false"/>
+                    </div>
+                    <div class="user-item">
+                        <label class="user-label" for="password-confirm">
+                            <i class="fa fa-lock"></i>
+                        </label>
+                        <input class="user-content" type="password" id="password-confirm"  placeholder="confirm password" autocomplete="false"/>
+                    </div>
+                    <div class="user-item">
+                        <label class="user-label" for="phone">
+                            <i class="fa fa-phone"></i>
+                        </label>
+                        <input class="user-content" type="text" id="phone"  placeholder="type phone number" autocomplete="false"/>
+                    </div>
+                    <div class="user-item">
+                        <label class="user-label" for="email">
+                            <i class="fa fa-envelope"></i>
+                        </label>
+                        <input class="user-content" type="text" id="email"  placeholder="type email" autocomplete="false"/>
+                    </div>
+                    <div class="user-item">
+                        <label class="user-label" for="question">
+                            <i class="fa fa-question"></i>
+                        </label>
+                        <input class="user-content" type="text" id="question"  placeholder="type question" autocomplete="false"/>
+                    </div>
+                    <div class="user-item">
+                        <label class="user-label" for="answer">
+                            <i class="fa fa-key"></i>
+                        </label>
+                        <input class="user-content" type="text" id="answer"  placeholder="type answer" autocomplete="false"/>
+                    </div>
+                    <a class="btn btn-submit" id="submit">立即注册</a>
+                    <div class="link-item">
+                        <a href="./user-login.html" class="link">已有帐号, 去登录?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

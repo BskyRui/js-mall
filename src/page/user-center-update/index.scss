@@ -1,0 +1,23 @@
+.user-center-update {
+    .form-line {
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        .label {
+            width: 60px;
+            display: inline-block;
+            text-align: left;
+        }
+        .input{
+            height: 25px;
+            line-height: 25px;
+            width: 200px;
+            font-size: 14px;
+            outline: none;
+        }
+    }
+    
+    .btn-edit {
+        margin-top: 15px;
+    }
+}
